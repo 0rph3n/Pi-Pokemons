@@ -15,20 +15,20 @@ const allpokemons = async () => {
     const pokemon = results.map((e) => {
       return {
         id: e.data.id,
-        nombre: e.data.name,
-        imagen: e.data.sprites.other.dream_world.front_default,
-        altura: e.data.height,
-        peso: e.data.weight,
-        Vida: e.data.stats[0].base_stat,
-        Ataque: e.data.stats[1].base_stat,
-        Defensa: e.data.stats[2].base_stat,
-        Velocidad: e.data.stats[5].base_stat,
+        name: e.data.name,
+        image: e.data.sprites.other.dream_world.front_default,
+        hp: e.data.stats[0].base_stat,
+        attack: e.data.stats[1].base_stat,
+        defense: e.data.stats[2].base_stat,
+        speed: e.data.stats[5].base_stat,
+        height: e.data.height,
+        weight: e.data.weight,
       };
     });
 
     return pokemon;
   } catch (error) {
-    throw Error(" Error al obtener peso");
+    throw Error(" Error al obtener información de los Pokemons ");
   }
 };
 
